@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cidades</title>
+    <title>Leitores</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
@@ -28,19 +28,21 @@
 </nav>
 
 <div class="container mt-4">
-    <h2>Lista de Cidades</h2>
+    <h2>Lista de Leitores</h2>
     <table class="table table-striped">
         <thead>
             <tr>
                 <th>Nome</th>
-                <th>Estado</th>
+                <th>Email</th>
+                <th>cpf</th>
             </tr>
         </thead>
         <tbody>
-            {% for cidade in cidades %}
+            {% for leitor in leitores %}
             <tr>
-                <td>{{ cidade.nome }}</td>
-                <td>{{ cidade.estado }}</td>
+                <td>{{ leitor.nome }}</td>
+                <td>{{ leitor.email }}</td>
+                <td>{{ leitor.cpf }}</td>
             </tr>
             {% endfor %}
         </tbody>
